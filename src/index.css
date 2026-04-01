@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #0A0A0A;
+  --color-accent: #FF6B00;
+  --color-accent-light: #FF9E00;
+  --color-secondary: #6B7280;
+  --color-border: #E5E7EB;
+  --color-section-bg: #F5F5F5;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-primary bg-white antialiased;
+  }
+}
+
+.max-w-page {
+  @apply max-w-[1200px] mx-auto px-6;
+}
+
+.btn-primary {
+  @apply bg-linear-to-r from-[#FF6B00] to-[#FF9E00] text-white px-8 py-4 rounded-md font-semibold transition-all hover:opacity-90 active:scale-[0.98] inline-flex items-center justify-center shadow-lg shadow-orange-500/20;
+}
+
+.card {
+  @apply border border-border p-8 rounded-lg transition-all hover:shadow-lg bg-white;
+}
+
+.section-padding {
+  @apply py-16;
+}
